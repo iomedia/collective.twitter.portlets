@@ -182,7 +182,7 @@ class Renderer(base.Renderer):
             max_results = self.data.max_results
 
             try:
-                results = tw.GetUserTimeline(tw_user, count=max_results)
+                results = tw.GetUserTimeline(screen_name=tw_user, count=max_results)
                 logger.info("%s results obtained." % len(results))
             except Exception, e:
                 logger.info("Something went wrong: %s." % e)
